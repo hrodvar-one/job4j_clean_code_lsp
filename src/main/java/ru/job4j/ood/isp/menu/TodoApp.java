@@ -18,12 +18,24 @@ public class TodoApp {
             String input = scanner.nextLine();
             int choice = Integer.parseInt(input);
             switch (choice) {
-                case 1 -> addRootItem(menu, scanner);
-                case 2 -> addChildItem(menu, scanner);
-                case 3 -> callAction(menu, scanner);
-                case 4 -> printer.print(menu);
-                case 5 -> run = false;
-                default -> System.out.println("Неверный выбор. Попробуйте снова.");
+                case 1:
+                    addRootItem(menu, scanner);
+                    break;
+                case 2:
+                    addChildItem(menu, scanner);
+                    break;
+                case 3:
+                    callAction(menu, scanner);
+                    break;
+                case 4:
+                    printer.print(menu);
+                    break;
+                case 5:
+                    run = false;
+                    break;
+                default:
+                    System.out.println("Неверный выбор. Попробуйте снова.");
+                    break;
             }
         }
     }
@@ -50,7 +62,8 @@ public class TodoApp {
         String parentName = scanner.nextLine();
         System.out.print("Введите название дочернего элемента: ");
         String childName = scanner.nextLine();
-        if (menu.add(parentName, childName, DEFAULT_ACTION)) {
+        boolean result = menu.add(parentName, childName, DEFAULT_ACTION);
+        if (result) {
             System.out.println("Дочерний элемент добавлен.");
         } else {
             System.out.println("Ошибка: Родительский элемент не найден.");
