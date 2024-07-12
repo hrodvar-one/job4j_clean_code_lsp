@@ -15,7 +15,8 @@ public class TodoApp {
 
         while (run) {
             showMenu();
-            int choice = Integer.parseInt(scanner.nextLine());
+            String input = scanner.nextLine();
+            int choice = Integer.parseInt(input);
             switch (choice) {
                 case 1 -> addRootItem(menu, scanner);
                 case 2 -> addChildItem(menu, scanner);
