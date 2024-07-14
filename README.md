@@ -25,3 +25,11 @@
 ---------1.1.2. Ограничения и требования к решению.
 
 -----1.2. Задача Вторая.
+
+<summary>Запуск проекта</summary>
+
+* Запустить метод main из класса TodoApp находящийся по пути \src\main\java\ru\job4j\ood\isp\menu\TodoApp.java
+
+<summary>Внешний вид запущенного приложения</summary>
+
+![img.png](img.png)
